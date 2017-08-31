@@ -86,7 +86,7 @@ namespace FunWithLoops
             //for loops gives you more control over where and when a loop stops
             */
 
-
+            /*
             //-------------In-class problems------------------
             //create and array called days with the elements monday, tuesday, etc.
             //use a for loop to print the elements to the console
@@ -150,6 +150,140 @@ namespace FunWithLoops
                 playAgainToo = Console.ReadLine();
             }
             while (playAgainToo == "yes");
-        }
+            */
+
+
+            /*
+            int x = 1;
+            while (x <= 10)
+            {
+                Console.WriteLine(x);
+                x++;
+            }
+            */
+
+            /*
+            //guess the magic number in three tries
+            int lives = 3;
+            int magicNumber = 24;
+            bool isPlaying = true;
+
+            while (lives > 0 && isPlaying == true) //using a bool as well
+            {
+                Console.WriteLine("Guess the magic number");
+                int userGuess = int.Parse(Console.ReadLine());
+                if (magicNumber == userGuess)
+                {
+                    Console.WriteLine("You guessed right!");
+                    isPlaying = false;
+                    //break;
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, try again..");
+                    lives--;
+                    Console.WriteLine("You have " + lives + " guess left"); //while continue to run because it's in while loop
+                }
+            }
+            */
+
+            //print out numbers 1 - 100
+            //if the number is a multiple of 3, print Fizz
+            //if the number is a multiple of 5, print Buzz
+            //if the number is a multiple of both, print FizzBuzz
+            for (int counter = 1; counter <= 100; counter++)
+            {
+                if (counter % 15 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (counter % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else if (counter % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else
+                {
+                    Console.WriteLine(counter);
+                }
+            }
+
+
+            //create an int array with 10 elements
+            //find the mean of these elements and output the result to the console
+            int[] meanArray = { 12, 33, 88, 4, 55, 34, 20, 72, 14, 54 };
+            int total = 0;
+            foreach (int element in meanArray)
+            {
+                total += element;
+            }
+            int mean = total / meanArray.Length;
+            Console.WriteLine(mean);
+
+            //1234
+            //1234
+
+            for (int i = 1; i <= 2; i++)
+            {
+                for (int j = 1; j <= 4; j++) //inner loop runs to completion for each instance of the outer loop
+                {
+                    Console.Write(j); //column
+                }
+                Console.WriteLine(); //row 
+            }
+
+            //print a triangle
+            int n = 4;
+            for (int row = 1; row <= n; row++)
+            {
+                for (int column = 1; column <= row; column++)
+                {
+                    Console.Write(column + " ");
+                }
+                Console.WriteLine();
+            }
+
+
+            //create multiplication table for 5x5 using nested loops
+            int x = 5;
+            for (int row = 1; row <= x; row++)
+            {
+                for (int column = 1; column <= x; column++)
+                {
+                    Console.Write(row + "x" + column + "  ");
+                }
+                Console.WriteLine();
+            }
+
+            //create and array of fave movies, print out each movie in the list unless it starts with a vowel
+            //hint: use .startsWith()
+            string[] faveMovies = { "Inglorious Basterds", "Baby Driver", "Casino", "Jackie Brown" };
+            string[] vowel = new string[]
+            {
+                "A",
+                "E",
+                "I",
+                "O",
+                "U"
+            };
+            foreach (string w in faveMovies)
+            {
+                if(item.StartsWith(vowel))
+            }
+
+
+
+
+
+            
+
+
+
+
     }
 }
+}
+
