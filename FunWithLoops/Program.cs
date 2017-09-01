@@ -260,30 +260,58 @@ namespace FunWithLoops
 
             //create and array of fave movies, print out each movie in the list unless it starts with a vowel
             //hint: use .startsWith()
-            string[] faveMovies = { "Inglorious Basterds", "Baby Driver", "Casino", "Jackie Brown" };
-            string[] vowel = new string[]
+            string[] faveMovies = { "Inglourious Basterds", "Baby Driver", "Casino", "Jackie Brown", "Up", "Avatar" };
+            string[] vowelArray = { "A", "E", "I", "O", "U" };
+
+
+            foreach (string movie in faveMovies)
             {
-                "A",
-                "E",
-                "I",
-                "O",
-                "U"
-            };
-            foreach (string w in faveMovies)
-            {
-                if(item.StartsWith(vowel))
+                foreach (string vowel in vowelArray)
+                {
+                    if (movie.StartsWith(vowel))
+                    {
+                        Console.WriteLine(movie);
+                    }
+                }
             }
 
 
+            //write a console application that asks the user for an int. if it is div by 3, then write "You won!"
+            //if it isn't, write "You Lost." Keep asking them for a number looping until they win
 
+            Console.WriteLine("Please enter a number");
+            int userInput = int.Parse(Console.ReadLine());
+            while (userInput % 3 > 0)
+            {
+                Console.WriteLine("You Lost. Please enter another number.");
+                userInput = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("You won!");
 
-
-            
-
-
-
-
+            //ask user for 2 numbers (1 and 2)
+            //check to see if 2 > 1
+            //if 1 is not < 2, have user enter new numbers
+            //otherwise, find all numbers that are multiples of 3 and print them to console
+            Console.WriteLine("Please enter a number 1:");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter a number 2:");
+            int num2 = int.Parse(Console.ReadLine());
+            while(num1>=num2)
+            {
+                Console.WriteLine("Number 1 must be smaller than number 2");
+                Console.WriteLine("Please enter a number 1:");
+                num1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Please enter a number 2:");
+                num2 = int.Parse(Console.ReadLine());
+            }
+            for (int i = num1; i < num2; i++)
+            {
+                if(i%3 ==0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
     }
-}
 }
 
